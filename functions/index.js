@@ -12,6 +12,7 @@
 //   databaseURL: "https://all-unit-converter-cedbc.firebaseio.com"
 // });
 
+var PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -42,4 +43,4 @@ mongoose.connect(process.env.DB_CONNECTION,
   () => console.log('Connect successfully to DB!..........')
 );
 
-app.listen(3000);
+app.listen(PORT);
